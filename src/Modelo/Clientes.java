@@ -11,20 +11,21 @@ package Modelo;
  */
 public class Clientes {
     private int Id;
-    private String Nombre, Direccion, Razon, Ci, Telefono;
+    private String Nombre, Direccion, Razon, Ci, Telefono, Correo;
 
     // Constructor vacío, necesario para algunos frameworks de persistencia.
     public Clientes() {
     }
 
     // Constructor con todos los atributos.
-    public Clientes(int Id, String Ci, String Telefono, String Nombre, String Direccion, String Razon) {
+    public Clientes(int Id, String Ci, String Telefono, String Nombre, String Direccion, String Razon, String Correo) {
         this.Id = Id;
         this.Ci = Ci;
         this.Telefono = Telefono;
         this.Nombre = Nombre;
         this.Direccion = Direccion;
         this.Razon = Razon;
+        this.Correo = Correo;
     }
 
     // Métodos getter y setter para acceder y modificar los atributos.
@@ -75,6 +76,14 @@ public class Clientes {
 
     public void setRazon(String Razon) {
         this.Razon = Razon;
+    }
+
+        public String getCorreo() {
+        return Correo;
+    }
+
+    public void setCorreo(String Correo) {
+        this.Correo = Correo;
     }
 
     // Podrías agregar otros métodos según las necesidades del sistema, como validaciones o toString().
